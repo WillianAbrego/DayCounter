@@ -74,6 +74,7 @@ function renderEvents() {
     button.addEventListener("click", (e) => {
       const id = button.getAttribute("data-id");
       events = events.filter((event) => event.id !== id);
+      save(JSON.stringify(events));
       renderEvents();
     });
   });
